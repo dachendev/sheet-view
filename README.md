@@ -1,3 +1,7 @@
+# Sheetview
+![Main View](https://i.ibb.co/jgK3vSr/Capture.png)
+![Settings View](https://i.ibb.co/sR1DkBB/Capture-1.png)
+
 ## Frequently Asked Questions
 **Q: How do I add a workbook?**  
 A: Click on the gear icon and choose a XLSX file.
