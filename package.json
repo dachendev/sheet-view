@@ -2,7 +2,7 @@
   "name": "sheetview",
   "productName": "sheetview",
   "version": "1.0.0",
-  "description": "excel data utility",
+  "description": "Excel data utility",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
