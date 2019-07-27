@@ -1,0 +1,11 @@
+div
+    div.item-list
+        each item in leftList
+            div.item
+                span.heading= item.header
+                span.content= item.value
+    div.item-list
+        each item in rightList
+            div.item
+                span.sub-heading= item.header
+                span.content= item.value

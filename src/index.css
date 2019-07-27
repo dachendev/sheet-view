@@ -1,0 +1,156 @@
+html, body, main {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 10pt;
+  color: #222;
+}
+
+li { list-style-type: none; }
+
+.heading {
+  display: block;
+  margin: 4px 0;
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+.sub-heading {
+  display: block;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+table {
+  display: block;
+  width: 100%;
+  max-height: 500px;
+  border-collapse: collapse;
+  overflow: auto;
+}
+
+th {
+  text-align: left;
+}
+
+th, td {
+  padding: 3px 24px 3px 6px;
+  white-space: nowrap;
+}
+
+td:hover {
+  color: purple;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+thead {
+  color: white;
+  background-color: black;
+}
+
+tbody tr:nth-child(even) {
+  background-color: lightgreen;
+}
+
+.search-active table:not(.search-table), .search-table tbody tr:not(.search-result) {
+  display: none;
+}
+
+#expand > div {
+  display: flex;
+  flex-direction: row;
+}
+
+.item-list {
+  width: 50%;
+}
+
+header, header form, header .nav {
+  display: flex;
+  
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 18px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  background-color: rgb(240, 240, 240);
+  z-index: 1;
+}
+
+main {
+  padding: 40px 20px 0px 20px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.modal-container {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+
+.modal {
+  background-color: white;
+  overflow: auto;
+  width: 80%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+select:empty {
+  display: none;
+}
+
+.modal:not(.modal-active) {
+  display: none;
+}
+
+.view:not(.view-active) {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+button, input[type='text'], select {
+  margin: 2px;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  padding: 2px 4px;
+  font: inherit;
+  color: inherit;
+  background-color: white;
+}
+
+button:hover {
+  color: white;
+  background-color: purple;
+}
+
+#settings form {
+  margin: 20px 0;
+}
+
+select, button {
+  cursor: pointer;
+}

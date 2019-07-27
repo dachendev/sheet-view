@@ -1,0 +1,60 @@
+{
+  "name": "sheetview",
+  "productName": "sheetview",
+  "version": "1.0.0",
+  "description": "excel data utility",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": "Jacob Dachenhaus",
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "name": "Sheetview",
+        "icon": "src/favicon.ico"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "sheetview"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "pug": "^2.0.4",
+    "xlsx": "^0.14.4"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.43",
+    "@electron-forge/maker-deb": "^6.0.0-beta.43",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.43",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.43",
+    "@electron-forge/maker-zip": "^6.0.0-beta.43",
+    "electron": "5.0.8"
+  }
+}

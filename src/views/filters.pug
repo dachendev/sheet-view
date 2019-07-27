@@ -1,0 +1,14 @@
+if workbook
+    each sheet, i in workbook
+        fieldset(data-sheet=sheet.name)
+            span.sub-heading
+                input(type='checkbox', checked=filters[sheet.name].active)
+                = sheet.name
+            ul
+                each header in sheet.headers
+                    li
+                        input(type='checkbox', data-header=header, checked=filters[sheet.name].headers[header].active)
+                        = header
+else
+    fieldset
+        span No workbook found

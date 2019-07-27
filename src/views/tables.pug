@@ -1,0 +1,16 @@
+if workbook
+    each sheet in workbook
+        span.heading= sheet.name
+        table(data-sheetname=sheet.name)
+            thead
+                tr
+                    each header in sheet.headers
+                        th= header
+            tbody
+                each row in sheet.map
+                    tr
+                        each value in row
+                            td(onclick=`expandRow(this, '${sheet.name}')`)= value
+else
+    div
+        span No workbook found

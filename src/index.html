@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Sheetview</title>
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+
+        <header>
+            <form action="javascript:void(0)" onsubmit="updateSearch(this)">
+                <button type="button" onclick="refreshWorkbook()">
+                    <i aria-hidden="true" class="icon ion-loop"></i>
+                </button>
+                <input type="text" name="query" placeholder="Search...">
+                <div id="searchSheets"></div>
+                <div id="searchHeaders"></div>
+                <button type="submit">
+                    <i aria-hidden="true" class="icon ion-search"></i>
+                </button>
+                <button type="button" onclick="resetSearch()">Reset</button>
+            </form>
+            <div class="nav">
+                <button type="button" onclick="setActiveView('tables')">
+                    <i aria-hidden="true" class="icon ion-home"></i>
+                </button>
+                <button type="button" onclick="setActiveView('settings')">
+                    <i aira-hidden="true" class="icon ion-gear-b"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="modal-container hidden" onclick="setActiveModal(null)">
+            <div class="modal" id="expand"></div>
+        </div> 
+        
+        <main>
+
+            <div class="view" id="settings">
+
+                <form action="javascript:void(0)" onsubmit="updateWorkbook(this)">
+                    <span class="heading">Workbook Settings</span>
+                    <fieldset>
+                        <span class="sub-heading">Change File</span>
+                        <input type="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+                    </fieldset>
+                    <button type="submit">Update</button>
+                </form>
+        
+                <form action="javascript:void(0)" onsubmit="updateFilters(this)">
+                    <span class="heading">Sheet Settings</span>
+                    <div id="filterSelect"></div>
+                    <button type="submit">Update</button>
+                </form>
+    
+            </div>
+
+            <div class="view view-active" id="tables"></div>
+
+        </main>
+
+        <script src="renderer.js"></script>
+
+    </body>
+</html>
